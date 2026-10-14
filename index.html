@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Ansh Vansh Library Management System - Complete NCERT & UP Board Textbook Collection (LKG to 12th Grade) with Reading Hall Desk Tokens & Digital Stacks.">
+  <title>Ansh Vansh Library • NCERT & UP Board Classical Library (LKG to 12th)</title>
+  <link rel="icon" type="image/png" href="images/ansh_vansh_logo.png">
+  <link rel="apple-touch-icon" href="images/ansh_vansh_logo.png">
+
+  <!-- Google Fonts: Playfair Display (Serif), Public Sans (Body), Courier Prime (Typewriter) -->
+  <!-- Google Fonts: Cinzel (Royal Roman Serif), Noto Serif Devanagari (Hindi), Playfair Display, Public Sans, Courier Prime -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Library Styling (Apple White, Blue, Black Cupertino Edition) -->
+  <link rel="stylesheet" href="css/library.css?v=4.0">
+</head>
+<body>
+  <script>
+    try {
+      window.scrollTo(0, 0);
+      if (document.documentElement) document.documentElement.scrollLeft = 0;
+      if (document.body) document.body.scrollLeft = 0;
+    } catch (e) {}
+  </script>
+
+  <!-- Top Brass Cornice Trim -->
+  <div class="top-cornice" aria-hidden="true"></div>
+
+  <!-- Classical Library Header -->
+  <header class="library-header">
+    <div class="header-container">
+      
+      <!-- Brand Crest & Title -->
+      <a href="#home" class="brand-crest" aria-label="Ansh Vansh Library Homepage">
+        <img src="images/ansh_vansh_logo.png" alt="Ansh Vansh Library Crest" class="brand-logo-img">
+        <div class="brand-titles">
+          <h1><span class="brand-ansh">ANSH</span> <span class="brand-vansh">VANSH</span> <span class="brand-lib">LIBRARY</span></h1>
+          <div class="brand-subtitle">NCERT &amp; UP Board Central Archives • Est. 2026</div>
+        </div>
+      </a>
+
+      <!-- Horizontal Ribbon Navigation Tabs -->
+      <nav class="library-nav" aria-label="Main Library Navigation">
+        <a href="#home" class="nav-link active" data-tab="home">
+          <span class="nav-icon">📚</span><span>Home Bookshelf</span>
+        </a>
+        <a href="#catalogue" class="nav-link" data-tab="catalogue">
+          <span class="nav-icon">📖</span><span>NCERT &amp; UP Board</span>
+        </a>
+        <a href="#tokens" class="nav-link" data-tab="tokens">
+          <span class="nav-icon">🎫</span><span>Reading Tokens</span>
+        </a>
+        <a href="#members" class="nav-link" data-tab="members">
+          <span class="nav-icon">👥</span><span>Scholars</span>
+        </a>
+        <a href="#circulation" class="nav-link" data-tab="circulation">
+          <span class="nav-icon">🖋️</span><span>Circulation</span>
+        </a>
+        <a href="#dashboard" class="nav-link" data-tab="dashboard">
+          <span class="nav-icon">📊</span><span>Ledger Stats</span>
+        </a>
+      </nav>
+
+      <!-- Header Controls: Sound, Night Lamp, Librarian Desk -->
+      <div class="header-actions">
+        <button id="sound-toggle" class="lamp-toggle-btn" title="Library Acoustics Toggle" aria-label="Toggle Sound Effects">
+          <span class="btn-icon">🔔</span> <span class="btn-text">Sound</span>
+        </button>
+        <button id="lamp-toggle" class="lamp-toggle-btn" title="Toggle Reading Lamp Mode" aria-label="Toggle Night Mode">
+          <span class="lamp-icon">💡</span> <span class="btn-text">Lamp</span>
+        </button>
+        <div id="librarian-desk-container">
+          <!-- Populated by JavaScript with Login Button or Librarian Nameplate -->
+          <button id="login-modal-open-btn" class="librarian-desk-btn" title="Librarian Desk Login">
+            <span class="btn-icon">🗝️</span> <span class="btn-text">Librarian</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT CONTAINER
+       ====================================================================== -->
+  <main id="main-content" style="flex: 1;">
+
+    <!-- --------------------------------------------------------------------
+         1. HOME SECTION: GRAND BOOKSHELF & STATS
+         -------------------------------------------------------------------- -->
+    <section id="section-home" class="tab-section hero-bookcase-section">
+      <div class="hero-container">
+        
+        <!-- Engraved Museum Plaque & Subtitle -->
+        <div class="hero-intro">
+          <div class="brass-nameplate ansh-vansh-plaque">
+            <span class="screw top-left" aria-hidden="true"></span>
+            <span class="screw top-right" aria-hidden="true"></span>
+            <span class="screw bottom-left" aria-hidden="true"></span>
+            <span class="screw bottom-right" aria-hidden="true"></span>
+            <div class="plaque-emblem-wrap">
+              <img src="images/ansh_vansh_logo.png" alt="Ansh Vansh Library Emblem" class="plaque-logo-img">
+            </div>
+            <h2>ANSH VANSH CENTRAL ARCHIVES &amp; ACADEMIC REPOSITORY</h2>
+            <div class="plaque-sub">अंश वंश पुस्तकालय एवं राष्ट्रीय पाठ्यचर्या संकलन</div>
+          </div>
+          <p class="hero-hindi-subtitle">
+            कक्षा LKG से 12वीं तक NCERT एवं UP Board की सभी मानक पाठ्यपुस्तकों का प्रामाणिक संकलन। 
+            विद्यार्थी वाचनालय डेस्क टोकन प्राप्त करके अध्ययन कर सकते हैं या घर ले जाने हेतु निर्गत करा सकते हैं।
+          </p>
+          <div class="hero-badges-row">
+            <span class="badge-curriculum badge-ncert">🏛️ NCERT 100% Complete</span>
+            <span class="badge-curriculum badge-upboard">📘 UP Board (UPMSP) Complete</span>
+            <span class="badge-curriculum badge-class">🎒 LKG to Class 12</span>
+            <span class="badge-curriculum badge-token">🎫 24-Desk Reading Hall</span>
+          </div>
+        </div>
+
+        <!-- Shelf Category Selector Bar -->
+        <div class="shelf-filter-bar" aria-label="Bookshelf Filter">
+          <button class="shelf-filter-btn active" data-shelf="all">✨ Complete Library Stacks (समग्र वाचनालय)</button>
+          <button class="shelf-filter-btn" data-shelf="tier1">🎒 बालवाटिका, प्राथमिक व उच्च प्राथमिक (LKG–8th)</button>
+          <button class="shelf-filter-btn" data-shelf="tier2">🏛️ माध्यमिक एवं बोर्ड परीक्षा (9th–12th)</button>
+        </div>
+
+        <!-- Shelf Swipe Prompt for Mobile & Touch Devices -->
+        <div class="shelf-swipe-prompt" aria-hidden="true">
+          <span>👈 स्वाइप करके पुस्तकें देखें (Swipe to explore books) 👉</span>
+        </div>
+
+        <!-- The Grand 3D Wooden Bookcase with Two Full Shelving Tiers -->
+        <div class="bookcase-frame">
+          
+          <!-- Upper Tier: Balvatika, Primary & Middle (LKG to 8th) -->
+          <div class="bookshelf-tier" id="shelf-tier-1">
+            <div class="bookshelf-header">
+              <div class="shelf-brass-tag">
+                <span class="tag-icon">📚</span>
+                <strong>आधारभूत एवं प्राथमिक संकलन</strong> • LKG TO 8TH GRADE
+              </div>
+              <span class="shelf-range-code">अलमारी BAL-01 से MID-08 • NCERT &amp; UPMSP</span>
+            </div>
+            
+            <div class="shelf-row-wrapper">
+              <div class="bookend bookend-left" title="Antique Brass Lion Bookend" aria-hidden="true">🦁</div>
+              <div id="hero-bookshelf-row-1" class="books-row">
+                <!-- Dynamically populated with Primary & Middle book spines -->
+              </div>
+              <div class="bookend bookend-right" title="Antique Brass Lion Bookend" aria-hidden="true">🦁</div>
+            </div>
+            
+            <div class="shelf-board" aria-hidden="true">
+              <div class="shelf-brass-trim"></div>
+            </div>
+          </div>
+
+          <!-- Lower Tier: Secondary & Senior Secondary (9th to 12th) -->
+          <div class="bookshelf-tier" id="shelf-tier-2">
+            <div class="bookshelf-header">
+              <div class="shelf-brass-tag">
+                <span class="tag-icon">🏛️</span>
+                <strong>माध्यमिक एवं बोर्ड संकलन</strong> • 9TH TO 12TH GRADE (UP BOARD &amp; NCERT)
+              </div>
+              <span class="shelf-range-code">मुख्य वाचनालय शेल्फ SEC-01 से SRSEC-12</span>
+            </div>
+            
+            <div class="shelf-row-wrapper">
+              <div class="bookend bookend-left" title="Antique Brass Lion Bookend" aria-hidden="true">🦁</div>
+              <div id="hero-bookshelf-row-2" class="books-row">
+                <!-- Dynamically populated with Secondary book spines -->
+              </div>
+              <div class="bookend bookend-right" title="Antique Brass Lion Bookend" aria-hidden="true">🦁</div>
+            </div>
+            
+            <div class="shelf-board" aria-hidden="true">
+              <div class="shelf-brass-trim"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Live Counts Plaque -->
+        <div class="library-stats-strip">
+          
+          <div class="stat-plaque">
+            <div class="stat-header">
+              <span class="stat-label">Total Textbooks</span>
+              <span class="stat-icon">📖</span>
+            </div>
+            <div id="stat-total-books" class="stat-number">—</div>
+            <div class="stat-hint">LKG to 12th Titles</div>
+          </div>
+
+          <div class="stat-plaque">
+            <div class="stat-header">
+              <span class="stat-label">Physical Copies</span>
+              <span class="stat-icon">📚</span>
+            </div>
+            <div id="stat-total-copies" class="stat-number">—</div>
+            <div class="stat-hint">Across Stacks Bal to 12</div>
+          </div>
+
+          <div class="stat-plaque">
+            <div class="stat-header">
+              <span class="stat-label">Scholars Enrolled</span>
+              <span class="stat-icon">👥</span>
+            </div>
+            <div id="stat-members" class="stat-number">—</div>
+            <div class="stat-hint">Student Member Cards</div>
+          </div>
+
+          <div class="stat-plaque">
+            <div class="stat-header">
+              <span class="stat-label">Active Reading Tokens</span>
+              <span class="stat-icon">🎫</span>
+            </div>
+            <div id="stat-active-tokens" class="stat-number" style="color: #d35400;">—</div>
+            <div class="stat-hint">Students at Reading Desks</div>
+          </div>
+
+          <div class="stat-plaque">
+            <div class="stat-header">
+              <span class="stat-label">Volumes on Loan</span>
+              <span class="stat-icon">🖋️</span>
+            </div>
+            <div id="stat-on-loan" class="stat-number" style="color: var(--banker-green-light);">—</div>
+            <div class="stat-hint">Home Loan Circulation</div>
+          </div>
+
+          <div class="stat-plaque">
+            <div class="stat-header">
+              <span class="stat-label">Overdue Ledger</span>
+              <span class="stat-icon">⏳</span>
+            </div>
+            <div id="stat-overdue" class="stat-number" style="color: var(--stamp-red);">—</div>
+            <div class="stat-hint">Late Penalty (Rs. 2/day)</div>
+          </div>
+
+        </div>
+
+        <!-- New Arrivals & Curated Showcase -->
+        <div style="margin-top: 3.5rem;">
+          <div class="brass-nameplate">
+            <h2>Recent Acquisitions: Board &amp; NCERT Textbooks</h2>
+          </div>
+          <div id="home-new-arrivals-grid" class="shelf-books-grid">
+            <!-- Populated with shelf cards -->
+          </div>
+        </div>
+
+        <!-- Most Consulted Textbooks -->
+        <div style="margin-top: 3.5rem; max-width: 820px; margin-left: auto; margin-right: auto;">
+          <div class="brass-nameplate" style="display: table; margin-left: auto; margin-right: auto;">
+            <h2>Most Consulted Textbooks in Reading Hall</h2>
+          </div>
+          <div class="parchment-card" style="margin-top: 1rem;">
+            <div id="home-most-borrowed-list" class="podium-list">
+              <!-- Populated with top books -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Library Hours Brass Plaque -->
+        <div style="margin-top: 3.5rem; text-align: center;">
+          <div style="display: inline-block; background: linear-gradient(180deg, #d8bc88 0%, #b08d57 50%, #7e5f2e 100%); padding: 1.2rem 2.5rem; border-radius: 6px; border: 2px solid #e8d0a3; box-shadow: var(--shadow-card);">
+            <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--wood-darkest); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem;">
+              केंद्रीय वाचनालय एवं पाठ्यपुस्तक अभिलेखागार
+            </h3>
+            <p style="font-family: var(--font-typewriter); font-size: 0.85rem; color: var(--wood-darkest);">
+              सोमवार से शनिवार: प्रातः 08:00 से रात्रि 21:00 • रविवार: 09:00 से 18:00<br>
+              NCERT व UP Board पाठ्यपुस्तक परामर्श: प्रथम एवं द्वितीय तल वाचनालय
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         2. CATALOGUE SECTION: NCERT & UP BOARD TEXTBOOKS (LKG TO 12TH)
+         -------------------------------------------------------------------- -->
+    <section id="section-catalogue" class="tab-section catalogue-drawer-section" style="display: none;">
+      
+      <div class="brass-nameplate">
+        <h2>NCERT &amp; UP Board Textbook Catalogue (LKG to 12th)</h2>
+      </div>
+
+      <!-- Wooden Card Cabinet Face with Brass Pull Handle -->
+      <div class="drawer-cabinet">
+        <div class="drawer-top-plate">
+          <div class="drawer-brass-handle">
+            <span>🗄️ पाठ्यपुस्तक सूची एवं खोज (CATALOGUE DRAWER)</span>
+          </div>
+          <div style="display: flex; gap: 0.6rem; align-items: center;">
+            <button id="catalogue-add-book-btn" class="btn-library btn-gold admin-only" style="display: none;">
+              ➕ Catalog New Volume
+            </button>
+          </div>
+        </div>
+
+        <!-- Drawer Search Bar -->
+        <div class="catalogue-search-row">
+          <div class="search-input-wrapper">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="text" id="catalogue-search-input" class="catalogue-search-input" 
+                   placeholder="Search by title, subject (गणित, विज्ञान), class (LKG to 12), author, ISBN, or shelf..."
+                   aria-label="Search Library Catalogue">
+          </div>
+          
+          <select id="catalogue-avail-select" class="form-control" style="width: auto; min-width: 160px;" aria-label="Filter Availability">
+            <option value="all">All Holdings</option>
+            <option value="available">On Shelf (Available)</option>
+            <option value="unavailable">Checked Out (All Copies)</option>
+          </select>
+
+          <select id="catalogue-sort-select" class="form-control" style="width: auto; min-width: 160px;" aria-label="Sort Order">
+            <option value="class">Sort by Class (LKG to 12)</option>
+            <option value="title_asc">Title (A to Z)</option>
+            <option value="title_desc">Title (Z to A)</option>
+            <option value="shelf">Shelf Location</option>
+            <option value="newest">Newest Catalogued</option>
+          </select>
+        </div>
+
+        <!-- Curriculum Filter Toolbar (Class, Board, Subject) -->
+        <div class="curriculum-select-row">
+          <label for="catalogue-class-select">कक्षा / Class:</label>
+          <select id="catalogue-class-select" class="form-control" style="width: auto; min-width: 140px; padding: 0.4rem 0.6rem;">
+            <option value="All">All Classes (LKG–12th)</option>
+            <option value="LKG">LKG (बालवाटिका 1)</option>
+            <option value="UKG">UKG (बालवाटिका 2)</option>
+            <option value="Class 1">Class 1 (कक्षा 1)</option>
+            <option value="Class 2">Class 2 (कक्षा 2)</option>
+            <option value="Class 3">Class 3 (कक्षा 3)</option>
+            <option value="Class 4">Class 4 (कक्षा 4)</option>
+            <option value="Class 5">Class 5 (कक्षा 5)</option>
+            <option value="Class 6">Class 6 (कक्षा 6)</option>
+            <option value="Class 7">Class 7 (कक्षा 7)</option>
+            <option value="Class 8">Class 8 (कक्षा 8)</option>
+            <option value="Class 9">Class 9 (कक्षा 9)</option>
+            <option value="Class 10">Class 10 (कक्षा 10 Board)</option>
+            <option value="Class 11">Class 11 (कक्षा 11)</option>
+            <option value="Class 12">Class 12 (कक्षा 12 Board)</option>
+          </select>
+
+          <label for="catalogue-board-select">बोर्ड / Board:</label>
+          <select id="catalogue-board-select" class="form-control" style="width: auto; min-width: 140px; padding: 0.4rem 0.6rem;">
+            <option value="All">All Boards</option>
+            <option value="NCERT">NCERT</option>
+            <option value="UP Board">UP Board (UPMSP)</option>
+          </select>
+
+          <label for="catalogue-subject-select">विषय / Subject:</label>
+          <select id="catalogue-subject-select" class="form-control" style="width: auto; min-width: 150px; padding: 0.4rem 0.6rem;">
+            <option value="All">All Subjects (सभी विषय)</option>
+            <option value="Hindi">Hindi (हिंदी)</option>
+            <option value="English">English (अंग्रेजी)</option>
+            <option value="Mathematics">Mathematics (गणित)</option>
+            <option value="Science">Science (विज्ञान)</option>
+            <option value="Physics">Physics (भौतिक विज्ञान)</option>
+            <option value="Chemistry">Chemistry (रसायन विज्ञान)</option>
+            <option value="Biology">Biology (जीव विज्ञान)</option>
+            <option value="Social Science">Social Science (सामाजिक विज्ञान)</option>
+            <option value="Balvatika">Balvatika (बालवाटिका)</option>
+          </select>
+        </div>
+
+        <!-- Category Pills & View Mode Switches -->
+        <div class="catalogue-filters-row">
+          <div id="catalogue-category-pills" class="filter-pills-list">
+            <!-- Populated dynamically with category pills -->
+          </div>
+
+          <div class="view-mode-toggle" role="group" aria-label="View Mode Toggle">
+            <button id="view-shelf-btn" class="view-btn active" title="Bookshelf View (Hardcover editions)">
+              <span>📚 Bookshelf</span>
+            </button>
+            <button id="view-card-btn" class="view-btn" title="Card Catalogue View (Typewritten Index Cards)">
+              <span>🗂️ Index Cards</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalogue Results Grid -->
+      <div id="catalogue-results-container">
+        <!-- Dynamically rendered as Shelf View or Card Catalogue View -->
+      </div>
+
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         3. READING DESK TOKENS SECTION (वाचनालय टोकन व्यवस्था)
+         -------------------------------------------------------------------- -->
+    <section id="section-tokens" class="tab-section catalogue-drawer-section" style="display: none;">
+      
+      <div class="brass-nameplate">
+        <h2>वाचनालय टोकन काउंटर एवं डेस्क स्थिति (Reading Hall Desk Tokens)</h2>
+      </div>
+
+      <div class="dashboard-grid">
+        
+        <!-- Left: Issue Reading Token Form -->
+        <div class="parchment-card">
+          <div class="card-title-bar">
+            <h3 style="font-size: 1.25rem;">🎫 वाचनालय टोकन जारी करें (Issue Reading Token)</h3>
+            <span style="font-family: var(--font-typewriter); font-size: 0.78rem; color: var(--ink-muted);">In-Library Reading Pass</span>
+          </div>
+
+          <form id="issue-reading-token-form">
+            <div class="form-group">
+              <label for="token-book-select" class="form-label">Select NCERT / UP Board Textbook:</label>
+              <select id="token-book-select" name="book_id" class="form-control" required>
+                <option value="">-- Choose Textbook (LKG to 12th) --</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="token-student-select" class="form-label">Select Scholar or Enter Member ID:</label>
+              <select id="token-student-select" name="student_id" class="form-control">
+                <option value="">-- Choose Registered Student --</option>
+              </select>
+              <div style="margin-top: 0.4rem;">
+                <input type="text" id="token-member-id-input" name="member_id" class="form-control" placeholder="Or type Member ID (e.g. LIB-UP10-042 or Roll No)">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="token-desk-select" class="form-label">Select Reading Desk / Table (1–24):</label>
+              <select id="token-desk-select" name="desk_number" class="form-control">
+                <option value="">-- Auto Assign Next Available Desk --</option>
+                <!-- Desks 1 to 24 populated by JS -->
+              </select>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="submit" class="btn-library btn-primary" style="width: 100%; padding: 0.8rem;">
+                <span>🎫</span> टोकन जारी करें एवं डेस्क आवंटित करें (Issue Token)
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: 24 Reading Desks Live Seating Map -->
+        <div class="parchment-card">
+          <div class="card-title-bar">
+            <h3 style="font-size: 1.15rem;">🪑 वाचनालय 24 डेस्क स्थिति (Reading Hall Desks)</h3>
+            <span id="desks-occupancy-badge" style="font-family: var(--font-typewriter); font-size: 0.78rem; color: var(--banker-green);">
+              Calculating...
+            </span>
+          </div>
+
+          <p style="font-size: 0.82rem; color: var(--ink-secondary); margin-bottom: 0.8rem;">
+            🟢 हरा लैंप = रिक्त डेस्क (उपलब्ध) • 🟠 नारंगी लैंप = छात्र अध्ययनरत (व्यस्त)
+          </p>
+
+          <div id="reading-desks-grid" class="reading-desks-grid">
+            <!-- 24 Desks dynamically rendered -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Active Reading Desk Tokens Ledger Table -->
+      <div class="parchment-card" style="margin-top: 2rem;">
+        <div class="card-title-bar">
+          <h3 style="font-size: 1.25rem;">📖 सक्रिय वाचनालय टोकन पंजिका (Active Reading Desk Ledger)</h3>
+          
+          <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+            <button class="filter-pill token-filter-pill active" data-status="active">Currently Reading</button>
+            <button class="filter-pill token-filter-pill" data-status="completed">Completed Sessions</button>
+            <button class="filter-pill token-filter-pill" data-status="all">All Tokens History</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="token-search-input" class="form-control" style="max-width: 360px;" 
+                 placeholder="Search token #, student name, or textbook...">
+        </div>
+
+        <div class="ledger-table-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Token #</th>
+                <th>Assigned Desk</th>
+                <th>Scholar Name</th>
+                <th>Textbook &amp; Class</th>
+                <th>Issued At</th>
+                <th>Reading Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tokens-table-body">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         4. MEMBERS SECTION: STUDENT DIRECTORY & PRINTABLE CARDS
+         -------------------------------------------------------------------- -->
+    <section id="section-members" class="tab-section catalogue-drawer-section" style="display: none;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div class="brass-nameplate">
+          <h2>Student Membership Roll (छात्र नामावली)</h2>
+        </div>
+        <button id="members-add-student-btn" class="btn-library btn-gold admin-only" style="display: none;">
+          ➕ Register New Scholar
+        </button>
+      </div>
+
+      <div class="parchment-card" style="margin-top: 1rem;">
+        <div style="margin-bottom: 1.2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <input type="text" id="member-search-input" class="form-control" style="max-width: 420px;" 
+                 placeholder="Search members by name, class, roll no, email, or member ID..."
+                 aria-label="Search Member Directory">
+        </div>
+
+        <div class="ledger-table-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Scholar Name</th>
+                <th>Member ID</th>
+                <th>Roll Number</th>
+                <th>Contact Details</th>
+                <th>Active Loans</th>
+                <th>Privileges &amp; Actions</th>
+              </tr>
+            </thead>
+            <tbody id="members-table-body">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         5. CIRCULATION DESK: ISSUE & RETURN (DATE DUE SLIP & STAMP EFFECT)
+         -------------------------------------------------------------------- -->
+    <section id="section-circulation" class="tab-section catalogue-drawer-section" style="display: none;">
+      
+      <div class="brass-nameplate">
+        <h2>Circulation Desk &amp; Date Due Slips</h2>
+      </div>
+
+      <div class="dashboard-grid">
+        
+        <!-- Left: Issue Book Desk -->
+        <div class="parchment-card">
+          <div class="card-title-bar">
+            <h3 style="font-size: 1.25rem;">🖋️ Issue Volume for Home Loan</h3>
+            <span style="font-family: var(--font-typewriter); font-size: 0.78rem; color: var(--ink-muted);">Standard 14 Days</span>
+          </div>
+
+          <form id="circulation-issue-form">
+            <div class="form-group">
+              <label for="issue-book-select" class="form-label">Select Volume from Available Copies:</label>
+              <select id="issue-book-select" name="book_id" class="form-control" required>
+                <option value="">-- Choose Volume from Shelves --</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="issue-student-select" class="form-label">Select Registered Scholar:</label>
+              <select id="issue-student-select" name="student_id" class="form-control" required>
+                <option value="">-- Choose Registered Student --</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="issue-loan-days" class="form-label">Loan Duration (Days):</label>
+              <select id="issue-loan-days" name="loan_days" class="form-control">
+                <option value="7">7 Days (Short Loan)</option>
+                <option value="14" selected>14 Days (Standard Academic Loan)</option>
+                <option value="21">21 Days (Extended Research)</option>
+                <option value="28">28 Days (Faculty Special)</option>
+              </select>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="submit" class="btn-library btn-primary" style="width: 100%; padding: 0.8rem;">
+                <span>🖋️</span> Stamp &amp; Issue Volume
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Overdue Rule & Fine Policy Plaque -->
+        <div class="parchment-card" style="background: linear-gradient(135deg, var(--parchment-dark), var(--parchment-aged));">
+          <div class="card-title-bar">
+            <h3 style="font-size: 1.15rem;">📜 Circulation Regulations</h3>
+          </div>
+          <div style="font-size: 0.88rem; line-height: 1.7; color: var(--ink-primary);">
+            <p><strong>Overdue Assessment:</strong> In accordance with library charter, late returns incur an automatic fee of <strong>Rs. 2.00 per overdue day</strong>.</p>
+            <p style="margin-top: 0.8rem;"><strong>Reading Hall Desk Tokens:</strong> Students studying within the library reading hall may use Reading Desk Tokens without exhausting home loan quotas.</p>
+            <p style="margin-top: 0.8rem;"><strong>Date Due Stamp:</strong> Every issued book receives an official ink due date slip affixed inside the back cover.</p>
+          </div>
+          
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <div class="stamp stamp-overdue" style="display: inline-block;">
+              ★ LATE PENALTY: RS. 2 / DAY ★
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Active Circulation Ledger Table -->
+      <div class="parchment-card" style="margin-top: 2rem;">
+        <div class="card-title-bar">
+          <h3 style="font-size: 1.25rem;">📖 Circulation Ledger</h3>
+          
+          <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+            <button class="filter-pill issue-filter-pill active" data-status="all">All Loans</button>
+            <button class="filter-pill issue-filter-pill" data-status="active">Active Only</button>
+            <button class="filter-pill issue-filter-pill" data-status="overdue">Overdue Only</button>
+            <button class="filter-pill issue-filter-pill" data-status="returned">Returned Archive</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="issues-search-input" class="form-control" style="max-width: 360px;" 
+                 placeholder="Filter ledger by title, ISBN, or scholar name...">
+        </div>
+
+        <div class="ledger-table-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Loan #</th>
+                <th>Volume Title</th>
+                <th>Borrower</th>
+                <th>Issued</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Fine Assessed</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="issues-table-body">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         6. DASHBOARD SECTION: ANALYTICS, BAR CHART & CSV EXPORT
+         -------------------------------------------------------------------- -->
+    <section id="section-dashboard" class="tab-section catalogue-drawer-section" style="display: none;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div class="brass-nameplate">
+          <h2>Master Ledger &amp; Archival Analytics</h2>
+        </div>
+
+        <!-- CSV Export Toolbar -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="api.php?action=export_csv&type=books" class="btn-library btn-secondary" title="Export Books in CSV">
+            📥 Books (CSV)
+          </a>
+          <a href="api.php?action=export_csv&type=students" class="btn-library btn-secondary" title="Export Members in CSV">
+            📥 Members (CSV)
+          </a>
+          <a href="api.php?action=export_csv&type=issues" class="btn-library btn-secondary" title="Export Circulation Ledger in CSV">
+            📥 Ledger (CSV)
+          </a>
+        </div>
+      </div>
+
+      <!-- Stat Cards Strip -->
+      <div class="library-stats-strip" style="margin-top: 1rem;">
+        <div class="stat-plaque">
+          <div class="stat-label">Catalogued Titles</div>
+          <div id="dash-titles" class="stat-number">—</div>
+        </div>
+        <div class="stat-plaque">
+          <div class="stat-label">Total Volumes</div>
+          <div id="dash-copies" class="stat-number">—</div>
+        </div>
+        <div class="stat-plaque">
+          <div class="stat-label">Registered Members</div>
+          <div id="dash-members" class="stat-number">—</div>
+        </div>
+        <div class="stat-plaque">
+          <div class="stat-label">Active Loans</div>
+          <div id="dash-issued" class="stat-number" style="color: var(--banker-green-light);">—</div>
+        </div>
+        <div class="stat-plaque">
+          <div class="stat-label">Overdue Books</div>
+          <div id="dash-overdue" class="stat-number" style="color: var(--stamp-red);">—</div>
+        </div>
+        <div class="stat-plaque">
+          <div class="stat-label">Fines Collected</div>
+          <div id="dash-fines" class="stat-number" style="color: var(--brass-gold);">—</div>
+        </div>
+      </div>
+
+      <!-- Charts & Top Books Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- Monthly Circulation Bar Chart -->
+        <div class="parchment-card">
+          <div class="card-title-bar">
+            <h3 style="font-size: 1.25rem;">📈 Monthly Circulation Volumes</h3>
+            <span style="font-family: var(--font-typewriter); font-size: 0.75rem; color: var(--ink-muted);">Loans per Month</span>
+          </div>
+          <div id="monthly-chart-wrap" class="chart-container">
+            <!-- SVG Chart rendered here -->
+          </div>
+        </div>
+
+        <!-- Top 5 Consulted Books Podium -->
+        <div class="parchment-card">
+          <div class="card-title-bar">
+            <h3 style="font-size: 1.25rem;">🏆 Top Borrowed Works</h3>
+          </div>
+          <div id="dash-top-books-list" class="podium-list">
+            <!-- Rendered by JavaScript -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent Circulation Activity Log -->
+      <div class="parchment-card" style="margin-top: 1.8rem;">
+        <div class="card-title-bar">
+          <h3 style="font-size: 1.25rem;">📜 Recent Circulation Ledger Transactions</h3>
+        </div>
+        <div class="ledger-table-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Volume</th>
+                <th>Scholar</th>
+                <th>Issue Date</th>
+                <th>Due Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="dash-recent-activity-tbody">
+              <!-- Rendered by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       LIBRARY FOOTER
+       ====================================================================== -->
+  <footer class="library-footer">
+    <div class="footer-inner">
+      <div class="footer-logo-wrap">
+        <img src="images/ansh_vansh_logo.png" alt="Ansh Vansh Library" class="footer-logo-img">
+      </div>
+      <h4 class="footer-title">
+        ANSH VANSH LIBRARY • NCERT &amp; UP BOARD ARCHIVES
+      </h4>
+      <p class="footer-quote">
+        &ldquo;विद्या ददाति विनयं, विनयाद् याति पात्रताम्।&rdquo; — अंश वंश ज्ञान का केंद्रीय भंडार, बालवाटिका से 12वीं तक।
+      </p>
+      <div class="footer-meta">
+        © 2026 Ansh Vansh Library (अंश वंश पुस्तकालय) • PHP 8 PDO Backend &amp; MariaDB MySQL • वाचनालय टोकन व्यवस्था
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       MODALS & DIALOGS
+       ====================================================================== -->
+
+  <!-- 1. Librarian Login Modal -->
+  <div id="login-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-brand">
+          <img src="images/ansh_vansh_logo.png" alt="Ansh Vansh Crest" class="modal-logo-img">
+          <h3 id="login-modal-title">🗝️ Chief Librarian Authentication</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="librarian-login-form">
+        <div class="modal-body">
+          <p style="font-size: 0.88rem; color: var(--ink-secondary); margin-bottom: 1.2rem;">
+            Please present your chief librarian keys to manage catalogue acquisitions, edit scholar cards, and issue volumes.
+          </p>
+          <div class="form-group">
+            <label for="login-username" class="form-label">Librarian Username:</label>
+            <input type="text" id="login-username" name="username" class="form-control" placeholder="e.g. admin" required value="admin">
+          </div>
+          <div class="form-group">
+            <label for="login-password" class="form-label">Key (Password):</label>
+            <input type="password" id="login-password" name="password" class="form-control" placeholder="••••••••" required value="admin123">
+          </div>
+          <div style="background: var(--parchment-dark); padding: 0.6rem 0.8rem; border-radius: 4px; font-family: var(--font-typewriter); font-size: 0.78rem;">
+            Default Credentials: <strong>admin</strong> / <strong>admin123</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-library btn-primary">Sign in to Desk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Book Inspection Modal -->
+  <div id="book-details-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="book-details-modal-title">
+    <div class="modal-dialog wide">
+      <div class="modal-header">
+        <h3 id="book-details-modal-title">📖 Volume Inspection</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div id="book-details-content" class="modal-body">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Reading Desk Token Stamped Pass Modal -->
+  <div id="token-slip-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="token-slip-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="token-slip-modal-title">🎫 वाचनालय प्रवेश टोकन (Reading Pass)</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div id="token-slip-content" class="modal-body">
+        <!-- Stamped Token Pass Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Digital Reading Room E-Reader Modal (ई-वाचनालय) -->
+  <div id="digital-reader-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="reader-modal-title">
+    <div class="modal-dialog wide" style="max-width: 960px;">
+      <div class="modal-header">
+        <h3 id="reader-modal-title">📖 ई-वाचनालय (Digital Reading Stacks)</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div id="digital-reader-content" class="modal-body" style="padding: 1.2rem;">
+        <!-- Digital Reading Room & Chapter Viewer Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Book Form Modal (Add / Edit) -->
+  <div id="book-form-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="book-form-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="book-form-modal-title">Catalog Volume</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="book-form">
+        <input type="hidden" name="id" value="">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="book-form-title" class="form-label">Volume Title:</label>
+            <input type="text" id="book-form-title" name="title" class="form-control" required placeholder="e.g. गणित कक्षा 10">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-form-author" class="form-label">Author / Board:</label>
+              <input type="text" id="book-form-author" name="author" class="form-control" required placeholder="e.g. NCERT / UPMSP">
+            </div>
+            <div class="form-group">
+              <label for="book-form-isbn" class="form-label">ISBN Code:</label>
+              <input type="text" id="book-form-isbn" name="isbn" class="form-control" required placeholder="978-817450027C10">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-form-class" class="form-label">Class / Grade:</label>
+              <select id="book-form-class" name="class_grade" class="form-control">
+                <option value="LKG">LKG</option>
+                <option value="UKG">UKG</option>
+                <option value="Class 1">Class 1</option>
+                <option value="Class 2">Class 2</option>
+                <option value="Class 3">Class 3</option>
+                <option value="Class 4">Class 4</option>
+                <option value="Class 5">Class 5</option>
+                <option value="Class 6">Class 6</option>
+                <option value="Class 7">Class 7</option>
+                <option value="Class 8">Class 8</option>
+                <option value="Class 9">Class 9</option>
+                <option value="Class 10" selected>Class 10</option>
+                <option value="Class 11">Class 11</option>
+                <option value="Class 12">Class 12</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="book-form-board" class="form-label">Board:</label>
+              <select id="book-form-board" name="board" class="form-control">
+                <option value="NCERT / UP Board" selected>NCERT / UP Board</option>
+                <option value="NCERT">NCERT Only</option>
+                <option value="UP Board">UP Board (UPMSP)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-form-category" class="form-label">Category:</label>
+              <input type="text" id="book-form-category" name="category" class="form-control" required placeholder="Secondary (माध्यमिक 9-10)">
+            </div>
+            <div class="form-group">
+              <label for="book-form-shelf" class="form-label">Shelf Number:</label>
+              <input type="text" id="book-form-shelf" name="shelf_no" class="form-control" required placeholder="Shelf Sec-06">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-form-quantity" class="form-label">Total Holdings (Copies):</label>
+              <input type="number" id="book-form-quantity" name="quantity" class="form-control" min="1" max="100" value="6" required>
+            </div>
+            <div class="form-group">
+              <label for="book-form-cover" class="form-label">Cover Image URL (Optional):</label>
+              <input type="url" id="book-form-cover" name="cover_url" class="form-control" placeholder="https://...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="book-form-desc" class="form-label">Description / Syllabus Summary:</label>
+            <textarea id="book-form-desc" name="description" class="form-control" rows="2" placeholder="अध्याय व पाठ्यक्रम विवरण..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-library btn-primary">Save to Catalogue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. Student Form Modal (Add / Edit) -->
+  <div id="student-form-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="student-form-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="student-form-modal-title">Register Member</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="student-form">
+        <input type="hidden" name="id" value="">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="student-form-name" class="form-label">Scholar Full Name:</label>
+            <input type="text" id="student-form-name" name="name" class="form-control" required placeholder="e.g. Rahul Verma">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-form-roll" class="form-label">Roll Number:</label>
+              <input type="text" id="student-form-roll" name="roll_no" class="form-control" required placeholder="UP10-2026-042">
+            </div>
+            <div class="form-group">
+              <label for="student-form-mem" class="form-label">Member ID:</label>
+              <input type="text" id="student-form-mem" name="member_id" class="form-control" required placeholder="LIB-UP10-042">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-form-email" class="form-label">Email:</label>
+              <input type="email" id="student-form-email" name="email" class="form-control" required placeholder="scholar@school.edu">
+            </div>
+            <div class="form-group">
+              <label for="student-form-phone" class="form-label">Contact Phone:</label>
+              <input type="text" id="student-form-phone" name="phone" class="form-control" required placeholder="+91 98765 43210">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-library btn-primary">Save Scholar Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 7. Reserve Book Modal -->
+  <div id="reserve-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="reserve-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="reserve-modal-title">📜 Reserve Volume</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="reserve-book-form">
+        <input type="hidden" name="book_id" value="">
+        <div class="modal-body">
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+            Place priority hold on: <strong id="reserve-book-title">—</strong>
+          </p>
+          <div class="form-group">
+            <label for="reserve-member-id" class="form-label">Enter your Member ID or Roll Number:</label>
+            <input type="text" id="reserve-member-id" name="member_id" class="form-control" required placeholder="e.g. LIB-UP10-042 or UP10-2026-042">
+          </div>
+          <p style="font-size: 0.78rem; color: var(--ink-muted); font-style: italic;">
+            When this textbook is returned to the circulation desk, you will receive priority hold notice.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-library btn-gold">Confirm Hold</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 8. Printable Library Card Modal -->
+  <div id="library-card-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="card-modal-title">
+    <div class="modal-dialog wide">
+      <div class="modal-header no-print">
+        <h3 id="card-modal-title">🎫 Official Library Card</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 1rem 0;">
+        <div id="printable-card-view">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+      <div class="modal-footer no-print">
+        <button id="print-library-card-btn" class="btn-library btn-primary">🖨️ Print Library Card</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. Member History Modal -->
+  <div id="member-history-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="history-modal-title">
+    <div class="modal-dialog wide">
+      <div class="modal-header">
+        <h3 id="history-modal-title">📜 Scholar Loan &amp; Token Ledger</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div id="member-history-content" class="modal-body">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. Date Due Slip Modal -->
+  <div id="due-slip-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="due-slip-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="due-slip-modal-title">🖋️ Circulation Due Slip</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div id="due-slip-content" class="modal-body">
+        <!-- Rendered by JavaScript with rubber stamp effects -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. Confirmation Dialog Modal -->
+  <div id="confirm-action-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="confirm-dialog-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="confirm-dialog-title">Library Archive Confirmation</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="confirm-dialog-message" style="font-size: 0.95rem; line-height: 1.6;"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="dialog-cancel-action-btn" class="btn-library btn-secondary">Cancel</button>
+        <button id="dialog-confirm-action-btn" class="btn-library btn-danger">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Core JavaScript Application -->
+  <script src="js/app.js?v=2.5"></script>
+</body>
+</html>
